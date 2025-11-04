@@ -1,9 +1,11 @@
 {
   "name": "Kitto App - Interactive Learning",
   "short_name": "Kitto App",
+  "id": "/",
   "description": "Interactive educational apps with AR experiences, STEM games, and multimedia content",
   "start_url": "./index.html",
   "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
   "background_color": "#1976d2",
   "theme_color": "#1976d2",
   "orientation": "any",
@@ -66,6 +68,20 @@
     }
   ],
   "shortcuts": [
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+kitto",
+      "url": "./index.html?protocol=%s"
+    },
+    {
+      "protocol": "web+kittoar",
+      "url": "./app/ar_app/index.html?ar=%s"
+    },
+    {
+      "protocol": "web+kittoquiz",
+      "url": "./app/qa_mc/stem-qa-game.html?quiz=%s"
+    }
   ],
   "prefer_related_applications": false
 }
